@@ -1,205 +1,238 @@
 .main__inner {
-	padding: 20px 0 40px;
-	border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-	display: flex;
-	flex-direction: column;
-	@media(min-width: 1024px) {
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 30px 0 60px;
-	}
+  padding: 20px 0 40px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0 60px;
+    align-items: flex-start;
+  }
 }
 
 .content {
-	background-color: $section-bg;
-	border: 1px solid rgba(51, 51, 51, 0.2);
-	@media(min-width: 1024px) {
-		width: 625px;
-	}
+  background-color: $section-bg;
+  border-radius: 3px;
 
-	&__form {
-		padding: 20px;
-		@media(min-width: 1024px) {
-			padding: 30px;
-		}
-	}
+  @media(min-width: 768px) {
+    margin-left: 20px;
+    flex: 1;
+  }
 
-	&__img {
-		@media(min-width: 637px) {
-			width: 100%;;
-		}
-	}
+  &__form {
+    padding: 20px;
+
+    @media(min-width: 768px) {
+      padding: 30px;
+    }
+  }
+
+  &__img {
+    @media(min-width: 637px) {
+      width: 100%;
+      ;
+    }
+  }
 }
 
 //data
 .data {
-	margin-bottom: 20px;
-	&__title {
-		font-size: 20px;
-		line-height: 1.21;
-		margin-bottom: 20px;
-		color: $titlecolor;	
-	}
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.21;
+    margin-bottom: 20px;
+    color: $titlecolor;
+  }
 }
 
 //specifications
 .specifications {
-	&__title {
-		line-height: 1.21;
-	}
+  &__title {
+    line-height: 1.21;
+  }
 
-	&__list-item {
-		display: flex;
-		flex-direction: column;
-		padding: 15px;
-		font-size: 14px;
-		line-height: 1.21;
-		@media(min-width: 1024px) {
-			padding: 12px 15px;
-		}
-		&:nth-child(odd) {
-			background-color: $item-bg;
-		}
-		&:last-child {
-			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-		}
-		span:first-child {
-			color: $inputcolor;
-			margin-bottom: 10px;
-		}
-	}
+  &__list {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.21;
 
-	&__btn {
-		color: $accent;
-		border: 2px solid #fff;
-		background-color: inherit;
-		padding: 5px;
-		margin-top: 20px;
-		transition: all .3s;
-		&:hover {
-			border: 2px solid $accent;
-			background-color: $accent;
-			color: $section-bg;
+      @media(min-width: 768px) {
+        padding: 12px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-		}
-	}
+      &:nth-child(odd) {
+        background-color: $item-bg;
+      }
+
+      span:first-child {
+        color: $inputcolor;
+        margin-bottom: 10px;
+
+        @media(min-width: 768px) {
+          margin-bottom: 0;
+          ;
+        }
+      }
+    }
+  }
+
+
+  &__btn {
+    color: $accent;
+    border: 2px solid #fff;
+    background-color: inherit;
+    padding: 5px;
+    margin-top: 20px;
+    transition: all .3s;
+
+    &:hover {
+      border: 2px solid $accent;
+      background-color: $accent;
+      color: $section-bg;
+
+    }
+  }
 }
 
 //price
 .price {
-	margin-bottom: 40px;
-	&__inner {
-		display: flex;
-		flex-direction: column;
-		input {
-			@media(min-width: 1024px) {
-				margin: 0;
-			}
-		}
-		@media(min-width: 1024px) {
-			flex-direction: row;
-			align-items: center;
-		}
-	}
+  margin-bottom: 40px;
 
-	&__radio {
-		@media(min-width: 1024px) {
-			margin-left: 20px;
-		}
-	}
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      @media(min-width: 768px) {
+        margin: 0;
+      }
+    }
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__radio {
+    @media(min-width: 768px) {
+      margin-left: 20px;
+    }
+  }
 }
 
 //supply
 .supply {
-	&__item {
-		display: flex;
-		flex-direction: column;
-		input {
-			@media(min-width: 1024px) {
-				margin: 0;
-			}
-		}
-		@media(min-width: 1024px) {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-	}
+  &__item {
+    display: flex;
+    flex-direction: column;
 
-	.input-group > .form-control {
-		border-left: 0;
-		border-right: 0;
-		margin: 0;
-	}
+    input {
+      @media(min-width: 768px) {
+        margin: 0;
+      }
+    }
 
-	.form-floating {
-		@media(min-width: 1024px) {
-			width: 100%;
-		}
-		&:last-child {
-			@media(min-width: 1024px) {
-				margin-left: 20px;
-			}
-		}
-	}
+    @media(min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
-	.mb-3 {
-		margin-bottom: 0!important;
-	}
+  input[name="amountInput"] {
+    padding: 0;
+    background-color: #fff;
+  }
 
-	.form-range {
-		margin: 0;
-		position: relative;
+  .input-group>.form-control {
+    border-left: 0;
+    border-right: 0;
+    margin: 0;
+  }
+
+  .form-floating {
+    @media(min-width: 768px) {
+      width: 100%;
+    }
+
+    &:last-child {
+      @media(min-width: 768px) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .mb-3 {
+    margin-bottom: 0 !important;
+  }
+
+  .form-range {
+    margin: 0;
+    position: relative;
     bottom: 10px;
     height: 16px;
-	}
+  }
 }
 
 //contacts
 .contacts {
-	margin-bottom: 40px;
-	&__box {
-		background-color: $item-bg;
-		padding: 20px;
-		&-phone {
-			margin-bottom: 15px;
-			span:first-child {
-				margin-right: 20px;
-				color: $inputcolor;
-			}
-		}
-		&-city {
-			span:first-child {
-				margin-right: 20px;
-				color: $inputcolor;
-			}
-		}
-	}	
+  margin-bottom: 40px;
+
+  &__box {
+    background-color: $item-bg;
+    padding: 20px;
+
+    &-phone {
+      margin-bottom: 15px;
+
+      span:first-child {
+        margin-right: 20px;
+        color: $inputcolor;
+      }
+    }
+
+    &-city {
+      span:first-child {
+        margin-right: 20px;
+        color: $inputcolor;
+      }
+    }
+  }
 }
 
 //letter
 .letter {
-	margin-bottom: 49px;
-	&__title {
-		margin-bottom: 20px;
-	}
+  margin-bottom: 49px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
 }
 
-//button 
+//button
 .download__btn {
-	margin-top: 20px;
-	.btn {
-		padding: 12px 21px;
-		font-weight: 600;
-		background-color: $accent;
-		color: $section-bg;
-		&:hover {
-			background-color: $section-bg;
-			color: $accent;
+  margin-top: 20px;
 
-		}
-	}
+  .btn {
+    padding: 12px 21px;
+    font-weight: 600;
+    background-color: $accent;
+    color: $section-bg;
+
+    &:hover {
+      background-color: $section-bg;
+      color: $accent;
+
+    }
+  }
 }
-
-
-
-

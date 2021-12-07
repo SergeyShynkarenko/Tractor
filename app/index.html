@@ -11,69 +11,89 @@
 			</sidebar>
 
 			<div class="content">
-				<form class="content__form" action="">
+				<form class="content__form"	>
 
 					<!-- data -->
 					<div class="data">
 						<h2 class="data__title">Заполните данные</h2>
+
 						<div class="form-floating">
-							<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+							<select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
 								<option selected>Трактор</option>
 								<option value="1">Трактор</option>
 								<option value="2">Комбайн</option>
 								<option value="3">Культиватор</option>
 							</select>
+
 							<label for="floatingSelect">Раздел</label>
 						</div>
+
 						<div class="form-floating">
-							<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+							<select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
 								<option selected>Спец. №M125-001 (b.ax+C+N.</option>
 								<option value="1">Спец. №M125-001 (b.ax+C+N.</option>
 								<option value="2">BELARUS-922.5</option>
 								<option value="3">МТЗ 80.1</option>
 							</select>
+
 							<label for="floatingSelect">Тип модели</label>
 						</div>
+
 						<img class="content__img" src="images/dist/ tractor.svg" alt="Tractor">
 					</div>
 
 					<!-- specifications -->
 					<div class="specifications block">
 						<h3 class="specifications__title title">Характеристики</h3>
+
 						<ul class="specifications__list">
 							<li class="specifications__list-item">
 								<span>Модель:</span>
 								<span>TTF / Tier III</span>
 							</li>
+
 							<li class="specifications__list-item">
 								<span>Робочий об’єм:</span>
 								<span>3,9 л</span>
 							</li>
+
 							<li class="specifications__list-item">
 								<span>Номінальна потужність:</span>
 								<span>110 к.с. (81 кВт) при 2 300 об/хв</span>
 							</li>
+
 							<li class="specifications__list-item">
 								<span>Максимальний крутний момент:</span>
 								<span>430 Нм</span>
 							</li>
+
 							<li class="specifications__list-item">
 								<span>Тип паливної системи:</span>
 								<span>Механічна (ротаційний ПНВТ Bosch)</span>
 							</li>
+
 							<li class="specifications__list-item">
 								<span>Об’єм баку для пального:</span>
 								<span>110 л</span>
 							</li>
+
+							<li class="specifications__list-item">
+								<span>Колiр:</span>
+								<span>Червоний</span>
+							</li>
 						</ul>
-						<button class="specifications__btn">Больше</button>
+
+
+						<button type="button" class="specifications__btn">Больше</button>
 					</div>
 
 					<!-- additionally -->
 					<div class="additionally block">
 						<h3 class="additionally__title title">Дополнительно</h3>
+
 						<div class="form-floating">
 							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 96px"></textarea>
+
 							<label for="floatingTextarea2">Ваш текст</label>
 						</div>
 					</div>
@@ -84,25 +104,31 @@
 
 						<div class="price__inner">
 							<div class="form-floating ">
-								<input class="form-control" placeholder="Цена">
+								<input class="form-control" placeholder="Цена" type="number" required>
+
 								<label>Цена</label>
 							</div>
 
 							<div class="price__radio">
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+
 									<label class="form-check-label" for="flexRadioDefault1">
 										USD
 									</label>
 								</div>
+
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+
 									<label class="form-check-label" for="flexRadioDefault2">
 										EUR
 									</label>
 								</div>
+
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+
 									<label class="form-check-label" for="flexRadioDefault2">
 										UAH
 									</label>
@@ -118,20 +144,20 @@
 						<div class="supply__item">
 
 							<div class="supply__box">
-
 								<div class="input-group mb-3">
 									<span class="input-group-text">Гарантия:</span>
-									<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+
+									<input name="amountInput" type="text" class="form-control" value="3" oninput="this.form.amountRange.value=this.value" readonly>
+
 									<span class="input-group-text">год</span>
 								</div>
 
-<!-- 								<label for="customRange1" class="form-label"></label> -->
-								<input type="range" class="form-range" id="customRange1">
-
+								<input name="amountRange" type="range" class="form-range" id="guarantee" min="1" max="5" step="1"  value="3" oninput="this.form.amountInput.value=this.value" >
 							</div>
 
 							<div class="form-floating">
 								<input class="form-control" placeholder="Условия оплаты">
+
 								<label>Условия оплаты</label>
 							</div>
 						</div>
@@ -142,6 +168,7 @@
 								<option value="2">EXW (самовивіз з м. Дніпро)</option>
 								<option value="3">EXW (самовивіз з м. Харків)</option>
 							</select>
+
 							<label for="floatingSelect">Условия поставки</label>
 						</div>
 
@@ -163,18 +190,23 @@
 					<!-- contacts -->
 					<div class="contacts block">
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-							<label class="form-check-label title" for="flexCheckDefault">
+							<input class="form-check-input" type="checkbox" value="" id="contactCheckbox">
+
+							<label class="form-check-label title" for="contactCheckbox">
 								Убрать контакты
 							</label>
 						</div>
+
 						<div class="contacts__box">
 							<div class="contacts__box-phone">
 								<span>Телефон:</span>
+
 								<span>050 361 36 66</span>
 							</div>
+
 							<div class="contacts__box-city">
 								<span>Филиал:</span>
+
 								<span>Одесса</span>
 							</div>
 						</div>
@@ -183,18 +215,25 @@
 					<!-- letter -->
 					<div class="letter block">
 						<h3 class="letter__title title">Письмо</h3>
+
 						<div class="form-floating mb-3">
-							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-							<label for="floatingInput">Email address</label>
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+
+							<label for="floatingInput">Email клиента</label>
 						</div>
+
 						<div class="form-floating mb-3">
-							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-							<label for="floatingInput">Email address</label>
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+
+							<label for="floatingInput">Тема письма</label>
 						</div>
+
 						<div class="form-floating">
-							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 96px"></textarea>
-							<label for="floatingTextarea2">Comments</label>
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 96px" required></textarea>
+
+							<label for="floatingTextarea2">Текст письма</label>
 						</div>
+
 						<button type="button" class="btn btn-outline-primary">
 							<svg width="19" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.633 10.49h2.534c1.833 0 3.333-.912 3.333-2.61s-1.767-2.543-3.2-2.61C14.004 2.615 11.933 1 9.5 1 7.2 1 5.719 2.43 5.233 3.847c-2 .178-3.733 1.37-3.733 3.321 0 1.952 1.8 3.322 4 3.322h1.867M9.5 13V6.993m2.133 0L9.5 4.996 7.367 6.993h4.266z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 							Прикрепить файл
@@ -203,6 +242,7 @@
 
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+
 						<label class="form-check-label" for="flexCheckChecked">
 							Отправить письмо вместе с брошюрой
 						</label>
@@ -210,12 +250,10 @@
 
 					<!-- button -->
 					<div class="d-grid gap-2 download__btn">
-						<button class="btn btn-primary" type="button">Скачать</button>
+						<button class="btn btn-primary" type="submit">Скачать</button>
 					</div>
-
 				</form>
 			</div>
-
 		</div>
 	</div>
 </main>
