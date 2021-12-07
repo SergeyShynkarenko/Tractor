@@ -1,0 +1,154 @@
+// USER VARIABLES SECTION
+$accent: #327BE9 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.37 // Document Line Height
+$inputcolor: #777
+$titlecolor: #000
+$backgroung: #E5E5E5
+$bordercolor: #E9E9E9
+$section-bg: #fff
+$redcolor: #E94040
+$item-bg: #F4F4F4
+$userfont: Inter, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+$form-floating-height: 50px
+$form-floating-input-padding-t: 23px
+$form-floating-input-padding-b: 6px
+$form-floating-padding-x: 20px
+$input-padding-x: 20px
+$form-floating-padding-y: 14px
+$form-select-bg-size: 10px 7px
+$form-select-indicator: url('../images/dist/down.svg')
+$input-group-addon-bg: $section-bg
+$input-group-addon-padding-y: 14px
+$input-group-addon-padding-x: 20px
+$form-range-track-height:	.2rem
+$form-range-track-bg: $accent
+$input-group-addon-color: $inputcolor
+$form-check-input-width: 1.4em
+$form-check-min-height: .1.4em
+// $form-check-radio-checked-bg-image: url('../images/dist/checkbox.svg')
+$form-check-input-checked-color: $accent         
+$form-check-input-checked-bg-color: #fff   
+$form-check-input-checked-border-color: $accent
+$form-range-thumb-bg: #fff
+$form-range-thumb-active-bg: $accent
+
+$primary: $accent
+$danger: $redcolor
+
+
+
+// $form-floating-label-transform:   scale(.85) translateY(-.65rem) translateX(.15rem)
+
+// IMPORT SECTION
+@import "node_modules/bootstrap/scss/bootstrap.scss"
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap.scss'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+// @mixin font($fname, $fstyle, $fweight, $furl)
+// 	@font-face
+// 		font-family: $fname
+// 		font-style: $fstyle
+// 		font-weight: $fweight
+// 		src: url($furl) format('woff2')
+
+// @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+// @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+// @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+// @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+img
+	max-width: 100%
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	font-weight: 400
+	position: relative
+	overflow-x: hidden
+	background-color: $backgroung
+
+
+.container
+	max-width: 870px
+	margin: 0 auto
+	height: 100%
+	padding: 0 15px
+
+.title
+	font-size: 14px
+	line-height: 1.43
+	font-weight: 600
+	text-transform: uppercase
+	margin-bottom: 15px
+
+.block
+	margin-bottom: 40px
+
+input, textarea, select
+	margin-bottom: 20px
+	resize: none
+
+
+.form-select ~ label
+	font-size: 12px
+	line-height: 1.21
+	color: $inputcolor
+
+.form-floating > label
+	color: $inputcolor
+
+.btn 
+	padding: 7px 34px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-color: $accent
+	transition: all .3s
+	svg
+		margin-right: 12px
+		stroke: $accent
+		transition: all .3s
+	&:hover
+		background-color: $accent
+		border-color: $accent
+		color: $section-bg;
+		svg
+		 stroke: #fff
+		
